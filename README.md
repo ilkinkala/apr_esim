@@ -6,7 +6,7 @@
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=thesukii&label=VIEWS&color=004643&style=flat-square" alt="views" />
-[![website up](https://img.shields.io/badge/website-up-004643?style=flat-square)](https://apr-ks.com/)
+  [![website up](https://img.shields.io/badge/website-up-004643?style=flat-square)](https://apr-ks.com/)
   <img src="https://img.shields.io/github/stars/thesukii/apr_esim?style=flat-square&color=004643" />
   <img src="https://img.shields.io/github/forks/thesukii/apr_esim?style=flat-square&color=004643" />
 </p>
