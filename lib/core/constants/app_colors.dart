@@ -5,17 +5,17 @@ class AppColors {
   AppColors._();
 
   // Primary Brand Colors
-  static const Color primary = Color(0xFF004643);      // Cyprus Green
+  static const Color primary = Color(0xFF004643); // Cyprus Green
   static const Color primaryLight = Color(0xFF006B66);
   static const Color primaryDark = Color(0xFF003533);
 
   // Background Colors
-  static const Color background = Color(0xFFF0EDE5);   // Cream
-  static const Color surface = Color(0xFFFFFFFF);      // White (cards)
+  static const Color background = Color(0xFFF0EDE5); // Cream
+  static const Color surface = Color(0xFFFFFFFF); // White (cards)
   static const Color surfaceVariant = Color(0xFFF5F2EC);
 
   // Text Colors
-  static const Color textPrimary = Color(0xFF1A1A1A);  // Charcoal
+  static const Color textPrimary = Color(0xFF1A1A1A); // Charcoal
   static const Color textSecondary = Color(0xFF666666);
   static const Color textTertiary = Color(0xFF999999);
   static const Color textDisabled = Color(0xFFCCCCCC);
