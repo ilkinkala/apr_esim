@@ -1,0 +1,31 @@
+name: Daily Activity
+
+on:
+  schedule:
+    # Runs every day at 12:00 UTC
+    - cron: '0 12 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  daily-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update activity log
+        run: |
+          echo "$(date -u '+%Y-%m-%d %H:%M:%S UTC') - Daily activity update" >> activity.log
+          # Keep only last 365 entries to avoid file bloat
+          tail -n 365 activity.log > activity.log.tmp && mv activity.log.tmp activity.log
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add activity.log
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "chore: daily activity update $(date -u '+%Y-%m-%d')"
+          git push
